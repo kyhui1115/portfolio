@@ -17,11 +17,11 @@ export default function Lines({
   const lineList = [
     {
       top: -10,
-      left: backgroundWidth * 0.1,
+      left: backgroundWidth * 0.05,
     },
     {
       top: backgroundHeight,
-      left: backgroundWidth * 0.3 + 10,
+      left: backgroundWidth * 0.2 + 10,
     },
     {
       top: backgroundHeight * 0.2,
