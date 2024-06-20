@@ -20,7 +20,7 @@ const contentList = [
         매력을 느껴 공부를 시작했습니다.
       </>
     ),
-    line: 'w-0 ml-12',
+    line: 'w-0 ml-16',
   },
   {
     text: (
@@ -31,7 +31,7 @@ const contentList = [
         하는 것을 좋아합니다.
       </>
     ),
-    line: 'w-24 ml-10',
+    line: 'w-24 ml-8',
   },
   {
     text: (

@@ -8,7 +8,7 @@ interface propTypes {
 export default function IntroduceBodyContent({ text, line }: propTypes) {
   return (
     <div className="flex items-end">
-      <div className={`ml-20 border-t border-r border-gray-400 h-36 ${line}`} />
+      <div className={`border-t border-r border-gray-400 h-36 ${line}`} />
       <p className="mb-4 ml-4 text-xl text-gray-400 whitespace-pre-wrap">
         {text}
       </p>
