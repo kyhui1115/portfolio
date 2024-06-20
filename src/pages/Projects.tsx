@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import Title from '../components/common/Title';
 import Project from '../components/projects/Project';
 
-import artFriendly1 from '../assets/artFriendly1.png';
-import artFriendly1Shadow from '../assets/artFriendly1Shadow.png';
-import artFriendly2 from '../assets/artFriendly2.png';
-import artFriendly2Shadow from '../assets/artFriendly2Shadow.png';
-import artFriendly3 from '../assets/artFriendly3.png';
-import artFriendly3Shadow from '../assets/artFriendly3Shadow.png';
+import project1 from '../assets/project1.png';
+import project1Shadow from '../assets/project1Shadow.png';
+import project2 from '../assets/project2.png';
+import project2Shadow from '../assets/project2Shadow.png';
+import project3 from '../assets/project3.png';
+import project3Shadow from '../assets/project3Shadow.png';
 
 export default function Projects() {
   const projectRef = useRef<HTMLDivElement>(null);
@@ -17,8 +17,8 @@ export default function Projects() {
 
   const [projectList, setProjectList] = useState([
     {
-      image: artFriendly1,
-      shadow: artFriendly1Shadow,
+      image: project1,
+      shadow: project1Shadow,
       title: 'Art Friendly',
       typeAndTerm: '팀 프로젝트 / 2024. 04 ~',
       intro: '전시 정보와 리뷰 등을 제공하는 서비스',
@@ -26,16 +26,16 @@ export default function Projects() {
         'React / React-native / Typescript / Redux\nTailwindCSS / Vercel / React-native-webview',
     },
     {
-      image: artFriendly2,
-      shadow: artFriendly2Shadow,
+      image: project2,
+      shadow: project2Shadow,
       title: 'DEV SHOP',
       typeAndTerm: '팀 프로젝트 / 2023. 06. ~ 2023. 09.',
       intro: '개발자에게 필요한 장비를 판매하는 웹 서비스',
       skill: 'React / Typescript / Redux\nTailwindCSS / AWS S3 / Recharts',
     },
     {
-      image: artFriendly3,
-      shadow: artFriendly3Shadow,
+      image: project3,
+      shadow: project3Shadow,
       title: 'HELL START UP',
       typeAndTerm: '팀 프로젝트 / 2023. 03. ~ 2023. 04.',
       intro: '헬스장 추천 및 커뮤니티 웹 서비스',
