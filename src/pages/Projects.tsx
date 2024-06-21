@@ -8,18 +8,19 @@ import project2 from '../assets/project2.png';
 import project2Shadow from '../assets/project2Shadow.png';
 import project3 from '../assets/project3.png';
 import project3Shadow from '../assets/project3Shadow.png';
+import LeftArrowBtn from '../components/projects/LeftArrowBtn';
 
 export default function Projects() {
   const projectRef = useRef<HTMLDivElement>(null);
 
   const [pageHeight, setPageHeight] = useState(0);
-  const [pagetWidth, setPagetWidth] = useState(0);
+  const [pageWidth, setPageWidth] = useState(0);
 
   const [projectList, setProjectList] = useState([
     {
       image: project1,
       shadow: project1Shadow,
-      title: 'Art Friendly',
+      title: 'ART FRIENDLY',
       typeAndTerm: '팀 프로젝트 / 2024. 04 ~',
       intro: '전시 정보와 리뷰 등을 제공하는 서비스',
       skill:
@@ -47,13 +48,18 @@ export default function Projects() {
   useEffect(() => {
     if (projectRef.current !== null) {
       setPageHeight(projectRef.current?.offsetHeight);
-      setPagetWidth(projectRef.current?.offsetWidth);
+      setPageWidth(projectRef.current?.offsetWidth);
     }
   }, []);
 
   return (
     <div className="relative flex w-full h-full bg-gray-500" ref={projectRef}>
       <Title text="projects" color="text-beige-100" />
+      <LeftArrowBtn
+        pageHeight={pageHeight}
+        pageWidth={pageWidth}
+        setProjectList={setProjectList}
+      />
       {projectList.map((project, i) => (
         <Project
           key={i}
@@ -64,7 +70,7 @@ export default function Projects() {
           intro={project.intro}
           skill={project.skill}
           pageHeight={pageHeight}
-          pagetWidth={pagetWidth}
+          pageWidth={pageWidth}
           zIndex={3 - i}
           idx={i}
           setProjectList={setProjectList}

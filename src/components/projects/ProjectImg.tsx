@@ -1,22 +1,46 @@
+import { Dispatch, SetStateAction } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { project } from './Project';
+
 interface propTypes {
   image: string;
   shadow: string;
   idx: number;
+  setProjectList: Dispatch<SetStateAction<project[]>>;
 }
 
-export default function ProjectImg({ image, shadow, idx }: propTypes) {
+export default function ProjectImg({
+  image,
+  shadow,
+  idx,
+  setProjectList,
+}: propTypes) {
+  const navigate = useNavigate();
+
+  const projectBtnHandler = () => {
+    if (idx === 0) {
+      navigate(`${idx}`);
+    }
+
+    if (idx !== 0) {
+      setProjectList((prev) => {
+        return [...prev.splice(idx, 1), ...prev];
+      });
+    }
+  };
+
   return (
     <div className="relative flex flex-col" style={{ perspective: '500px' }}>
-      <img
-        src={image}
-        alt=""
+      <button
+        onClick={projectBtnHandler}
         style={{
           transform: 'rotateY(15deg)',
           width: 700 * (1 - 0.14 * idx) + 'px',
           height: 322 * (1 - 0.14 * idx) + 'px',
         }}
-        className="rounded-xl"
-      />
+      >
+        <img src={image} alt="" className="rounded-xl" />
+      </button>
       <div
         style={{
           width: 700 * (1 - 0.14 * idx) + 'px',

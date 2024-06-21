@@ -10,13 +10,13 @@ interface propTypes {
   intro: string;
   skill: string;
   pageHeight: number;
-  pagetWidth: number;
+  pageWidth: number;
   zIndex: number;
   idx: number;
   setProjectList: Dispatch<SetStateAction<project[]>>;
 }
 
-interface project {
+export interface project {
   image: string;
   shadow: string;
   title: string;
@@ -33,32 +33,26 @@ export default function Project({
   intro,
   skill,
   pageHeight,
-  pagetWidth,
+  pageWidth,
   zIndex,
   idx,
   setProjectList,
 }: propTypes) {
-  const projectBtnHandler = () => {
-    if (idx === 0) {
-    }
-
-    if (idx !== 0) {
-      setProjectList((prev) => {
-        return [...prev.splice(idx, 1), ...prev];
-      });
-    }
-  };
   return (
-    <button
+    <div
       style={{
         top: pageHeight * (0.3 + idx * 0.02) + 'px',
-        left: pagetWidth * (0.3 - idx * 0.06) + 'px',
+        left: pageWidth * (0.3 - idx * 0.06) + 'px',
         zIndex: zIndex,
       }}
       className="absolute flex"
-      onClick={projectBtnHandler}
     >
-      <ProjectImg image={image} shadow={shadow} idx={idx} />
+      <ProjectImg
+        image={image}
+        shadow={shadow}
+        idx={idx}
+        setProjectList={setProjectList}
+      />
       {idx === 0 ? (
         <ProjectInfo
           title={title}
@@ -67,6 +61,6 @@ export default function Project({
           skill={skill}
         />
       ) : null}
-    </button>
+    </div>
   );
 }
