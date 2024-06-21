@@ -15,24 +15,15 @@ module.exports = {
         'gray-500': '#2B2B2B',
       },
       animation: {
-        'scaleup-2s': 'scaleup 2s linear',
-        'scaleup-1s': 'scaleup 1s linear',
+        translate: 'translate 1s linear',
       },
       keyframes: {
-        scaleup: {
+        translate: {
           from: {
-            transform: 'scale(0)',
+            transform: 'translateY(-10%)',
           },
           to: {
-            transform: 'scale(1)',
-          },
-        },
-        appear2s: {
-          from: {
-            opacity: 0,
-          },
-          to: {
-            opacity: 1,
+            transform: 'translateY(0%)',
           },
         },
       },
