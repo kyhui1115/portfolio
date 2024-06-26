@@ -1,8 +1,9 @@
 import { Dispatch, SetStateAction } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import { project } from './Project';
 
 interface propTypes {
+  id: number;
   image: string;
   shadow: string;
   idx: number;
@@ -10,16 +11,14 @@ interface propTypes {
 }
 
 export default function ProjectImg({
+  id,
   image,
   shadow,
   idx,
   setProjectList,
 }: propTypes) {
-  const navigate = useNavigate();
-
   const projectBtnHandler = () => {
     if (idx === 0) {
-      navigate(`${idx}`);
     }
 
     if (idx !== 0) {

@@ -13,6 +13,9 @@ module.exports = {
         'gray-300': '#7E7E7E',
         'gray-400': '#404040',
         'gray-500': '#2B2B2B',
+        'red-100': '#EE6C6C',
+        'yellow-100': '#ECC96B',
+        'green-100': '#7FD52A',
       },
       animation: {
         translate: 'translate 1s linear',

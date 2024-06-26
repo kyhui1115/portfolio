@@ -3,20 +3,20 @@ import ProjectImg from './ProjectImg';
 import ProjectInfo from './ProjectInfo';
 
 interface propTypes {
+  id: number;
   image: string;
   shadow: string;
   title: string;
   typeAndTerm: string;
   intro: string;
   skill: string;
-  pageHeight: number;
-  pageWidth: number;
   zIndex: number;
   idx: number;
   setProjectList: Dispatch<SetStateAction<project[]>>;
 }
 
 export interface project {
+  id: number;
   image: string;
   shadow: string;
   title: string;
@@ -26,14 +26,13 @@ export interface project {
 }
 
 export default function Project({
+  id,
   image,
   shadow,
   title,
   typeAndTerm,
   intro,
   skill,
-  pageHeight,
-  pageWidth,
   zIndex,
   idx,
   setProjectList,
@@ -41,13 +40,14 @@ export default function Project({
   return (
     <div
       style={{
-        top: pageHeight * (0.3 + idx * 0.02) + 'px',
-        left: pageWidth * (0.3 - idx * 0.06) + 'px',
         zIndex: zIndex,
+        top: 46 + idx * 20,
+        left: 320 - idx * 90,
       }}
-      className="absolute flex"
+      className={`absolute flex`}
     >
       <ProjectImg
+        id={id}
         image={image}
         shadow={shadow}
         idx={idx}

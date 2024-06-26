@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import Title from '../components/common/Title';
 import Project from '../components/projects/Project';
 
@@ -13,11 +13,9 @@ import LeftArrowBtn from '../components/projects/LeftArrowBtn';
 export default function Projects() {
   const projectRef = useRef<HTMLDivElement>(null);
 
-  const [pageHeight, setPageHeight] = useState(0);
-  const [pageWidth, setPageWidth] = useState(0);
-
   const [projectList, setProjectList] = useState([
     {
+      id: 0,
       image: project1,
       shadow: project1Shadow,
       title: 'ART FRIENDLY',
@@ -27,6 +25,7 @@ export default function Projects() {
         'React / React-native / Typescript / Redux\nTailwindCSS / Vercel / React-native-webview',
     },
     {
+      id: 1,
       image: project2,
       shadow: project2Shadow,
       title: 'DEV SHOP',
@@ -35,6 +34,7 @@ export default function Projects() {
       skill: 'React / Typescript / Redux\nTailwindCSS / AWS S3 / Recharts',
     },
     {
+      id: 2,
       image: project3,
       shadow: project3Shadow,
       title: 'HELL START UP',
@@ -45,37 +45,29 @@ export default function Projects() {
     },
   ]);
 
-  useEffect(() => {
-    if (projectRef.current !== null) {
-      setPageHeight(projectRef.current?.offsetHeight);
-      setPageWidth(projectRef.current?.offsetWidth);
-    }
-  }, []);
-
   return (
-    <div className="relative flex w-full h-full bg-gray-500" ref={projectRef}>
-      <Title text="projects" color="text-beige-100" />
-      <LeftArrowBtn
-        pageHeight={pageHeight}
-        pageWidth={pageWidth}
-        setProjectList={setProjectList}
-      />
-      {projectList.map((project, i) => (
-        <Project
-          key={i}
-          image={project.image}
-          shadow={project.shadow}
-          title={project.title}
-          typeAndTerm={project.typeAndTerm}
-          intro={project.intro}
-          skill={project.skill}
-          pageHeight={pageHeight}
-          pageWidth={pageWidth}
-          zIndex={3 - i}
-          idx={i}
-          setProjectList={setProjectList}
-        />
-      ))}
+    <div
+      className="relative flex items-center justify-center h-screen bg-gray-500 shrink-0"
+      ref={projectRef}
+    >
+      <div className="w-[1300px] h-[515px] relative flex items-center mt-20">
+        <LeftArrowBtn setProjectList={setProjectList} />
+        {projectList.map((project, i) => (
+          <Project
+            key={project.id}
+            id={project.id}
+            image={project.image}
+            shadow={project.shadow}
+            title={project.title}
+            typeAndTerm={project.typeAndTerm}
+            intro={project.intro}
+            skill={project.skill}
+            zIndex={3 - i}
+            idx={i}
+            setProjectList={setProjectList}
+          />
+        ))}
+      </div>
     </div>
   );
 }

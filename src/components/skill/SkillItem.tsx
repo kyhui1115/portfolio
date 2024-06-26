@@ -40,7 +40,7 @@ export default function SkillItem({
         style={{ top: skillCoor.top + 'px', left: skillCoor.left + 'px' }}
         ref={skillRef}
       >
-        <span className="mt-2 mb-4 text-2xl font-bold text-beige-100">
+        <span className="mt-2 mb-4 text-2xl font-bold text-red-100">
           {name}
         </span>
         {items.map((item, i) => (

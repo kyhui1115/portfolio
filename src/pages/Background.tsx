@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import Education from '../components/background/Education';
 import Experience from '../components/background/Experience';
 import Lines from '../components/background/Lines';
-import Title from '../components/common/Title';
 
 export default function Background() {
   const backgroundRef = useRef<HTMLDivElement>(null);
@@ -19,10 +18,9 @@ export default function Background() {
 
   return (
     <div
-      className="relative flex w-full h-full overflow-hidden bg-beige-300"
+      className="relative flex h-screen overflow-hidden bg-beige-300 shrink-0"
       ref={backgroundRef}
     >
-      <Title text="background" />
       <Experience />
       <Education />
       <Lines

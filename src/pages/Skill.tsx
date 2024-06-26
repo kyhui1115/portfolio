@@ -24,8 +24,7 @@ export default function Skill() {
   }, []);
 
   return (
-    <div className="relative flex items-center justify-center w-full h-full bg-beige-300">
-      <Title text="skill" />
+    <div className="relative flex items-center justify-center h-screen bg-beige-300 shrink-0">
       <img src={monitor} alt="monitor" className="w-40 h-40" ref={monitorRef} />
       <SkillList monitorCenterCoor={monitorCenterCoor} />
     </div>
