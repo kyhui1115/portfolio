@@ -34,15 +34,15 @@ export default function ProjectImg({
         onClick={projectBtnHandler}
         style={{
           transform: 'rotateY(15deg)',
-          width: 700 * (1 - 0.14 * idx) + 'px',
-          height: 322 * (1 - 0.14 * idx) + 'px',
+          width: 800 * (1 - 0.14 * idx) + 'px',
+          height: 368 * (1 - 0.14 * idx) + 'px',
         }}
       >
         <img src={image} alt="" className="rounded-xl" />
       </button>
       <div
         style={{
-          width: 700 * (1 - 0.14 * idx) + 'px',
+          width: 800 * (1 - 0.14 * idx) + 'px',
           height: 100 * (1 - 0.14 * idx) + 'px',
           transform: 'rotateY(15deg) scaleY(-1)',
         }}
@@ -52,7 +52,7 @@ export default function ProjectImg({
         src={shadow}
         alt=""
         style={{
-          width: 700 * (1 - 0.14 * idx) + 'px',
+          width: 800 * (1 - 0.14 * idx) + 'px',
           height: 100 * (1 - 0.14 * idx) + 'px',
           transform: 'rotateY(15deg) scaleY(-1)',
           maskImage:

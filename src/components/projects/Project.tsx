@@ -41,8 +41,8 @@ export default function Project({
     <div
       style={{
         zIndex: zIndex,
-        top: 46 + idx * 20,
-        left: 320 - idx * 90,
+        top: 65 + idx * 20,
+        left: 300 - idx * 90,
       }}
       className={`absolute flex`}
     >

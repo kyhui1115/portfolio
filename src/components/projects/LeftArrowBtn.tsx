@@ -15,7 +15,7 @@ export default function LeftArrowBtn({ setProjectList }: propTypes) {
 
   return (
     <button
-      className="mb-10 text-5xl hover:text-red-100 text-beige-100"
+      className="text-5xl mb-28 hover:text-red-100 text-beige-100"
       onClick={btnHandler}
     >
       <IoIosArrowBack />
