@@ -4,7 +4,7 @@ import ScrollText from '../components/introduce/ScrollText';
 
 export default function Introduce() {
   return (
-    <div className="relative flex flex-col h-screen bg-gray-500 shrink-0">
+    <div className="relative flex flex-col h-[95vh] bg-gray-500 shrink-0">
       <IntroduceTitle />
       <IntroduceBody />
       <ScrollText />

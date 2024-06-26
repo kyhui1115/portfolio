@@ -18,7 +18,7 @@ export default function Background() {
 
   return (
     <div
-      className="relative flex h-screen overflow-hidden bg-beige-300 shrink-0"
+      className="relative flex h-[95vh] overflow-hidden bg-beige-300 shrink-0"
       ref={backgroundRef}
     >
       <Experience />

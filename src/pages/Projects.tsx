@@ -46,7 +46,7 @@ export default function Projects() {
 
   return (
     <div
-      className="relative flex items-center justify-center h-screen bg-gray-500 shrink-0"
+      className="relative flex items-center justify-center h-[95vh] bg-gray-500 shrink-0"
       ref={projectRef}
     >
       <div className="w-[1335px] h-[600px] relative flex items-center mt-20">
