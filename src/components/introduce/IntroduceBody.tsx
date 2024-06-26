@@ -2,11 +2,11 @@ import IntroduceBodyText from './IntroduceBodyText';
 
 export default function IntroduceBody() {
   return (
-    <>
+    <div className="mb-2">
       {contentList.map((content, i) => (
         <IntroduceBodyText key={i} text={content.text} />
       ))}
-    </>
+    </div>
   );
 }
 
