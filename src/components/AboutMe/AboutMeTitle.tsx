@@ -1,4 +1,4 @@
-export default function IntroduceTitle() {
+export default function AboutMeTitle() {
   return (
     <div className="flex flex-col mt-2 ml-4 font-bold leading-none text-beige-100 text-[230px] mb-auto">
       <div className="flex items-center">

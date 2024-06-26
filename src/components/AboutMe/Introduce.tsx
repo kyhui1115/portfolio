@@ -1,13 +1,11 @@
-import IntroduceBodyText from './IntroduceBodyText';
-import UserInfo from './UserInfo';
+import IntroduceText from './IntroduceText';
 
-export default function IntroduceBody() {
+export default function Introduce() {
   return (
-    <div className="mb-2">
+    <div className="flex flex-col">
       {contentList.map((content, i) => (
-        <IntroduceBodyText key={i} text={content.text} />
+        <IntroduceText key={i} text={content.text} />
       ))}
-      <UserInfo />
     </div>
   );
 }

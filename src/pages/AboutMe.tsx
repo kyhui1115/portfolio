@@ -1,12 +1,12 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
-import IntroduceBody from '../components/introduce/IntroduceBody';
-import IntroduceTitle from '../components/introduce/IntroduceTitle';
+import AboutMeBody from '../components/AboutMe/AboutMeBody';
+import AboutMeTitle from '../components/AboutMe/AboutMeTitle';
 
 interface propTypes {
   setCurrentPage: Dispatch<SetStateAction<number>>;
 }
 
-export default function Introduce({ setCurrentPage }: propTypes) {
+export default function AboutMe({ setCurrentPage }: propTypes) {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,8 +23,8 @@ export default function Introduce({ setCurrentPage }: propTypes) {
   return (
     <div className="relative flex flex-col h-[95vh] bg-gray-500 shrink-0">
       <div ref={sectionRef} className="absolute top-[90%]" />
-      <IntroduceTitle />
-      <IntroduceBody />
+      <AboutMeTitle />
+      <AboutMeBody />
     </div>
   );
 }

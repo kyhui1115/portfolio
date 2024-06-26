@@ -1,9 +1,9 @@
-import Introduce from './pages/Introduce';
+import AboutMe from './pages/AboutMe';
 import Skill from './pages/Skill';
 import Projects from './pages/Projects';
 import Background from './pages/Background';
 import Nav from './components/nav/Nav';
-import ScrollText from './components/introduce/ScrollText';
+import ScrollText from './components/AboutMe/ScrollText';
 import { useState } from 'react';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="relative flex flex-col w-full">
       <Nav currentPage={currentPage} />
-      <Introduce setCurrentPage={setCurrentPage} />
+      <AboutMe setCurrentPage={setCurrentPage} />
       <Skill setCurrentPage={setCurrentPage} />
       <Projects setCurrentPage={setCurrentPage} />
       <Background setCurrentPage={setCurrentPage} />

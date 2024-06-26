@@ -15,7 +15,7 @@ export default function Nav({ currentPage }: propTypes) {
 }
 
 const navList = [
-  { text: 'introduce' },
+  { text: 'about me' },
   { text: 'skill' },
   { text: 'project' },
   { text: 'background' },
