@@ -1,10 +1,15 @@
-import { useEffect, useRef, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import Education from '../components/background/Education';
 import Experience from '../components/background/Experience';
 import Lines from '../components/background/Lines';
 
-export default function Background() {
+interface propTypes {
+  setCurrentPage: Dispatch<SetStateAction<number>>;
+}
+
+export default function Background({ setCurrentPage }: propTypes) {
   const backgroundRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const [backgroundWidth, setBackgroundWidth] = useState(0);
   const [backgroundHeight, setBackgroundHeight] = useState(0);
@@ -16,11 +21,24 @@ export default function Background() {
     }
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setCurrentPage(3);
+      }
+    });
+
+    if (sectionRef.current !== null) {
+      observer.observe(sectionRef.current);
+    }
+  }, [setCurrentPage]);
+
   return (
     <div
-      className="relative flex h-[95vh] overflow-hidden bg-beige-300 shrink-0"
+      className="relative flex overflow-hidden h-[95vh] bg-beige-300 shrink-0"
       ref={backgroundRef}
     >
+      <div ref={sectionRef} className="absolute top-[90%]" />
       <Experience />
       <Education />
       <Lines

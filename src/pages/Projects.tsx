@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import Project from '../components/projects/Project';
 
 import project1 from '../assets/project1.png';
@@ -9,8 +9,24 @@ import project3 from '../assets/project3.png';
 import project3Shadow from '../assets/project3Shadow.png';
 import LeftArrowBtn from '../components/projects/LeftArrowBtn';
 
-export default function Projects() {
-  const projectRef = useRef<HTMLDivElement>(null);
+interface propTypes {
+  setCurrentPage: Dispatch<SetStateAction<number>>;
+}
+
+export default function Projects({ setCurrentPage }: propTypes) {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setCurrentPage(2);
+      }
+    });
+
+    if (sectionRef.current !== null) {
+      observer.observe(sectionRef.current);
+    }
+  }, [setCurrentPage]);
 
   const [projectList, setProjectList] = useState([
     {
@@ -45,11 +61,9 @@ export default function Projects() {
   ]);
 
   return (
-    <div
-      className="relative flex items-center justify-center h-[95vh] bg-gray-500 shrink-0"
-      ref={projectRef}
-    >
-      <div className="w-[1335px] h-[600px] relative flex items-center mt-20">
+    <div className="relative flex items-center justify-center h-[95vh] bg-gray-500 shrink-0">
+      <div ref={sectionRef} className="absolute top-[90%]" />
+      <div className="w-[1370px] h-[600px] relative flex items-center mt-20">
         <LeftArrowBtn setProjectList={setProjectList} />
         {projectList.map((project, i) => (
           <Project
