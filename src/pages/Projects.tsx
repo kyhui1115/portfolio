@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react';
-import Title from '../components/common/Title';
 import Project from '../components/projects/Project';
 
 import project1 from '../assets/project1.png';
@@ -50,7 +49,7 @@ export default function Projects() {
       className="relative flex items-center justify-center h-screen bg-gray-500 shrink-0"
       ref={projectRef}
     >
-      <div className="w-[1300px] h-[515px] relative flex items-center mt-20">
+      <div className="w-[1335px] h-[600px] relative flex items-center mt-20">
         <LeftArrowBtn setProjectList={setProjectList} />
         {projectList.map((project, i) => (
           <Project

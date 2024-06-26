@@ -1,5 +1,4 @@
 import { useParams } from 'react-router-dom';
-import Title from '../components/common/Title';
 import BackBtn from '../components/projectDetail/BackBtn';
 import ProjectTitle from '../components/projectDetail/ProjectTitle';
 import ProjectBody from '../components/projectDetail/ProjectBody';
@@ -10,7 +9,6 @@ export default function ProjectDetail() {
 
   return (
     <div className="relative flex items-center justify-center w-full h-full bg-gray-500">
-      <Title text="project" />
       <ProjectTitle title={project.title} />
       <ProjectBody project={project} />
       <BackBtn />

@@ -1,4 +1,3 @@
-import Title from '../components/common/Title';
 import monitor from '../assets/monitor.svg';
 import SkillList from '../components/skill/SkillList';
 import { useEffect, useRef, useState } from 'react';
