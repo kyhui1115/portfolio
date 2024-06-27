@@ -1,11 +1,9 @@
 import Introduce from './Introduce';
-import UserInfo from './UserInfo';
 
 export default function AboutMeBody() {
   return (
-    <div className="flex mb-2">
+    <div className="flex mb-2 w-[1421px] justify-between ml-8">
       <Introduce />
-      <UserInfo />
     </div>
   );
 }
