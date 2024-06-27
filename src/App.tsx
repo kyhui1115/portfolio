@@ -5,6 +5,7 @@ import Background from './pages/Background';
 import Nav from './components/nav/Nav';
 import ScrollText from './components/AboutMe/ScrollText';
 import { useState } from 'react';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -16,6 +17,7 @@ function App() {
       <Skill setCurrentPage={setCurrentPage} />
       <Projects setCurrentPage={setCurrentPage} />
       <Background setCurrentPage={setCurrentPage} />
+      <Footer />
       {currentPage < 3 ? <ScrollText /> : null}
     </div>
   );
