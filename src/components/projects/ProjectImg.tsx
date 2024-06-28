@@ -40,8 +40,12 @@ export default function ProjectImg({
           width: 800 * (1 - 0.14 * idx) + 'px',
           height: 368 * (1 - 0.14 * idx) + 'px',
         }}
+        className="flex items-center justify-center bg-gray-500"
       >
-        <img src={image} alt="" className="rounded-xl" />
+        <span className="absolute text-3xl font-bold text-yellow-100">
+          more
+        </span>
+        <img src={image} alt="" className="z-10 rounded-xl hover:opacity-50" />
       </button>
       <div
         style={{
