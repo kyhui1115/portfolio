@@ -41,7 +41,7 @@ export default function Skill({ setCurrentPage }: propTypes) {
 
   return (
     <div className="relative flex items-center justify-center h-[95vh] bg-beige-300 shrink-0">
-      <div ref={sectionRef} className="absolute top-[90%]" />
+      <div ref={sectionRef} className="absolute top-[70%]" />
       <img src={monitor} alt="monitor" className="w-40 h-40" ref={monitorRef} />
       <SkillList monitorCenterCoor={monitorCenterCoor} />
     </div>

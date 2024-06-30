@@ -38,7 +38,7 @@ export default function Background({ setCurrentPage }: propTypes) {
       className="relative flex overflow-hidden h-[95vh] bg-beige-300 shrink-0"
       ref={backgroundRef}
     >
-      <div ref={sectionRef} className="absolute top-[90%]" />
+      <div ref={sectionRef} className="absolute top-[70%]" />
       <Experience />
       <Education />
       <Lines

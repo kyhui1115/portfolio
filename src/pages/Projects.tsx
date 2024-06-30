@@ -45,7 +45,7 @@ export default function Projects({ setCurrentPage }: propTypes) {
       shadow: project2Shadow,
       title: 'DEV SHOP',
       typeAndTerm: '팀 프로젝트 / 2023. 06. ~ 2023. 09.',
-      intro: '개발자에게 필요한 장비를 판매하는 웹 서비스',
+      intro: '개발자에게 필요한 장비를 판매하는 서비스',
       skill: 'React / Typescript / Redux\nTailwindCSS / AWS S3 / Recharts',
     },
     {
@@ -54,7 +54,7 @@ export default function Projects({ setCurrentPage }: propTypes) {
       shadow: project3Shadow,
       title: 'HELL START UP',
       typeAndTerm: '팀 프로젝트 / 2023. 03. ~ 2023. 04.',
-      intro: '헬스장 추천 및 커뮤니티 웹 서비스',
+      intro: '헬스장 추천 및 커뮤니티 서비스',
       skill:
         'React / Javascript / Zustand\nTailwindCSS / AWS S3 / Kakao Map API',
     },
@@ -62,7 +62,7 @@ export default function Projects({ setCurrentPage }: propTypes) {
 
   return (
     <div className="relative flex items-center justify-center h-[95vh] bg-gray-500 shrink-0">
-      <div ref={sectionRef} className="absolute top-[90%]" />
+      <div ref={sectionRef} className="absolute top-[70%]" />
       <div className="w-[1370px] h-[600px] relative flex items-center mt-20">
         <LeftArrowBtn setProjectList={setProjectList} />
         {projectList.map((project, i) => (

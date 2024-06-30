@@ -42,9 +42,7 @@ export default function ProjectImg({
         }}
         className="flex items-center justify-center bg-gray-500"
       >
-        <span className="absolute text-3xl font-bold text-yellow-100">
-          more
-        </span>
+        <span className="absolute text-3xl font-bold text-red-100">more</span>
         <img src={image} alt="" className="z-10 rounded-xl hover:opacity-50" />
       </button>
       <div
@@ -70,8 +68,3 @@ export default function ProjectImg({
     </div>
   );
 }
-
-// 0.14
-
-// 0.86
-// 0.72

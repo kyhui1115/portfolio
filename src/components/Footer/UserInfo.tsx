@@ -15,7 +15,7 @@ export default function UserInfo() {
 
 const userInfoList = [
   {
-    icon: <BsGithub className="text-3xl" />,
+    icon: <BsGithub className="text-3xl hover:text-red-100" />,
     href: 'https://github.com/kyhui1115',
   },
 ];

@@ -22,7 +22,7 @@ export default function AboutMe({ setCurrentPage }: propTypes) {
   }, [setCurrentPage]);
   return (
     <div className="relative flex flex-col h-[95vh] bg-gray-500 shrink-0">
-      <div ref={sectionRef} className="absolute top-[90%]" />
+      <div ref={sectionRef} className="absolute top-[70%]" />
       <AboutMeTitle />
       <AboutMeBody />
     </div>
