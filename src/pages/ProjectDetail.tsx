@@ -1,10 +1,8 @@
 import { useParams } from 'react-router-dom';
-import { BsGithub } from 'react-icons/bs';
-import { CgWebsite } from 'react-icons/cg';
 import BackBtn from '../components/projectDetail/BackBtn';
 import ProjectTitle from '../components/projectDetail/ProjectTitle';
 import ProjectBody from '../components/projectDetail/ProjectBody';
-import locationFlow from '../assets/locationFlow.png';
+import { projects } from '../data/projects';
 
 export default function ProjectDetail() {
   const id = Number(useParams().id);

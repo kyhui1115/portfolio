@@ -4,8 +4,8 @@ import AboutMe from '../pages/AboutMe';
 import Skill from '../pages/Skill';
 import Projects from '../pages/Projects';
 import Background from '../pages/Background';
-import Footer from '../components/Footer/Footer';
-import ScrollText from '../components/AboutMe/ScrollText';
+import Footer from '../components/footer/Footer';
+import ScrollText from '../components/aboutMe/ScrollText';
 
 export default function Main() {
   const [currentPage, setCurrentPage] = useState(0);

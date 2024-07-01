@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
-import AboutMeBody from '../components/AboutMe/AboutMeBody';
-import AboutMeTitle from '../components/AboutMe/AboutMeTitle';
+import AboutMeBody from '../components/aboutMe/AboutMeBody';
+import AboutMeTitle from '../components/aboutMe/AboutMeTitle';
 
 interface propTypes {
   setCurrentPage: Dispatch<SetStateAction<number>>;
