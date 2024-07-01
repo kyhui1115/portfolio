@@ -16,7 +16,9 @@ export default function NavBtn({ text, idx, currentPage }: propTypes) {
     <button
       onClick={navBtnHandler}
       className={`mr-10 tracking-wide text-xl ${
-        currentPage === idx ? 'text-gray-400 font-bold' : 'text-beige-100'
+        currentPage === idx
+          ? 'text-gray-400 font-bold'
+          : 'text-beige-100 hover:text-red-100'
       }`}
     >
       {text}
