@@ -42,7 +42,7 @@ export default function Project({
       style={{
         zIndex: zIndex,
         top: 65 + idx * 20,
-        left: 300 - idx * 90,
+        left: 300 - idx * (120 - idx * 20),
       }}
       className={`absolute flex`}
     >

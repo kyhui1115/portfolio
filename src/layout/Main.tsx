@@ -9,6 +9,7 @@ import ScrollText from '../components/aboutMe/ScrollText';
 
 export default function Main() {
   const [currentPage, setCurrentPage] = useState(0);
+
   return (
     <div className="relative flex flex-col w-full">
       <Nav currentPage={currentPage} />

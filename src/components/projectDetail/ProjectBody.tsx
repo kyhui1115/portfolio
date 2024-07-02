@@ -20,6 +20,10 @@ interface propTypes {
       name: string;
       text: string;
     };
+    role: {
+      title: string;
+      body: ReactElement;
+    };
     devs: dev[];
   };
 }
@@ -39,7 +43,7 @@ export default function ProjectBody({ project }: propTypes) {
     <div className="px-6 py-6 bg-gray-400 w-240 rounded-xl h-216">
       <Header title={project.title} term={project.term} links={project.links} />
       <Sub intro={project.intro} skill={project.skill} team={project.team} />
-      <Main devs={project.devs} />
+      <Main devs={project.devs} role={project.role} />
     </div>
   );
 }

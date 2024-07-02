@@ -9,6 +9,7 @@ module.exports = {
       },
       width: {
         240: '60rem',
+        84: '21rem',
       },
       colors: {
         'beige-100': '#FAF5F0',

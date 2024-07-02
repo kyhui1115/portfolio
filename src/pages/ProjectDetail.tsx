@@ -9,7 +9,7 @@ export default function ProjectDetail() {
   const project = projectDetails[id];
 
   return (
-    <div className="relative flex items-center justify-center w-screen h-screen bg-gray-500">
+    <div className="relative flex items-center justify-center w-screen h-screen overflow-y-scroll bg-gray-500">
       <ProjectTitle title={project.title} />
       <ProjectBody project={project} />
       <BackBtn />
