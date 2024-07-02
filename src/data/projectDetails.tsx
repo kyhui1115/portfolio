@@ -166,7 +166,7 @@ export const projectDetails = [
     },
     devs: [
       {
-        title: '반복되는 Ajax 요청으로 인해 코드 길이가 증가하는 문제 해결',
+        title: '중북된 서버 데이터 요청으로 인한 코드 개선',
         body: (
           <>
             <li className="mb-2">
@@ -182,16 +182,17 @@ export const projectDetails = [
               예측하였습니다.
             </li>
             <li className="mb-2">
-              Ajax 요청 중 자주 사용되는 코드를 custom hook으로 모듈화하여 15 ~
-              30줄 정도의 코드를 한 줄로 불러와 여러
+              서버 데이터 요청 중 자주 사용되는 코드를 custom hook으로
+              모듈화하여 15 ~ 30줄 정도의 코드를 한 줄로 불러와
               <br />
-              페이지에서 사용하여 유지보수성 및 재사용성을 높일 수 있었습니다.
+              여러 페이지에서 사용하여 유지보수성 및 재사용성을 높일 수
+              있었습니다.
             </li>
           </>
         ),
       },
       {
-        title: 'UX를 개선하는 UI 구현',
+        title: 'UI/UX 개선',
         body: (
           <>
             <li className="mb-2">
