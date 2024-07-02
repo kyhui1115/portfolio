@@ -26,7 +26,9 @@ export default function ProjectImg({
 
     if (idx !== 0) {
       setProjectList((prev) => {
-        return [...prev.splice(idx, 1), ...prev];
+        const newList = [...prev.splice(idx, 1), ...prev];
+        localStorage.setItem('list', JSON.stringify(newList));
+        return newList;
       });
     }
   };

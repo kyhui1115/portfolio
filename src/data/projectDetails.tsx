@@ -2,7 +2,7 @@ import { BsGithub } from 'react-icons/bs';
 import { CgWebsite } from 'react-icons/cg';
 import locationFlow from '../assets/locationFlow.png';
 
-export const projects = [
+export const projectDetails = [
   {
     title: 'ART FRIENDLY',
     term: '2024. 04 ~',
@@ -29,6 +29,23 @@ export const projects = [
       text: 'React  /  React-native  /  Typescript  /  Redux  /  TailwindCSS  /  Vercel  /  React-native-webView',
     },
     devs: [
+      {
+        title: '담당',
+        body: (
+          <>
+            <li className="mb-2">
+              카카오 로그인, 로그아웃, 회원탈퇴 등 사용자 인증 기능 구현
+            </li>
+            <li className="mb-2">
+              인기 전시, 지역별 전시 등 테마별 전시 목록 조회 UI 및 기능 구현
+            </li>
+            <li>
+              모바일 위치 서비스, 캘린더 일정 등록 기능 구현 등 프로젝트
+              프론트엔드 전반 UI 및 기능 구현
+            </li>
+          </>
+        ),
+      },
       {
         title: '하이브리드 앱 구현',
         body: (
@@ -139,6 +156,20 @@ export const projects = [
     },
     devs: [
       {
+        title: '담당',
+        body: (
+          <>
+            <li className="mb-2">
+              매출 내역, 주문내역, 문의내역 등 관리자 페이지 UI 및 기능 구현
+            </li>
+            <li className="mb-2">회원가입, 로그인 등 사용자 인증 기능 구현</li>
+            <li>
+              개인정보 수정, 사용자 주문 목록 등 마이 페이지 UI 및 기능 구현
+            </li>
+          </>
+        ),
+      },
+      {
         title: '반복되는 Ajax 요청으로 인해 코드 길이가 증가하는 문제 해결',
         body: (
           <>
@@ -209,6 +240,15 @@ export const projects = [
       text: 'React  /  Javascript  /  Zustand  /  TailwindCSS  /  AWS S3  /  Kakao Map API',
     },
     devs: [
+      {
+        title: '담당',
+        body: (
+          <>
+            <li className="mb-2">헬스장 목록, 상세 페이지 UI 및 기능 구현</li>
+            <li>헬스장 등록, 수정 페이지 UI 및 기능 구현</li>
+          </>
+        ),
+      },
       {
         title: '안정적인 Form 데이터 관리',
         body: (

@@ -16,7 +16,7 @@ export default function ProjectInfo({
       <span className="text-2xl font-semibold tracking-wide text-beige-100">
         {title}
       </span>
-      <span className="mb-6 text-sm font-semibold text-gray-100">
+      <span className="mb-6 text-sm font-semibold text-gray-100 whitespace-pre-wrap">
         {typeAndTerm}
       </span>
       <span className="text-lg font-semibold text-yellow-100">introduce</span>

@@ -9,7 +9,9 @@ interface propTypes {
 export default function LeftArrowBtn({ setProjectList }: propTypes) {
   const btnHandler = () => {
     setProjectList((prev) => {
-      return [...prev.slice(1), ...prev.slice(0, 1)];
+      const newList = [...prev.slice(1), ...prev.slice(0, 1)];
+      localStorage.setItem('list', JSON.stringify(newList));
+      return newList;
     });
   };
 
