@@ -13,7 +13,10 @@ interface propTypes {
 export default function Main({ devs, role }: propTypes) {
   return (
     <div className="flex flex-col w-full px-3 py-3 mt-10 overflow-y-scroll bg-gray-500 rounded-lg h-136">
-      <span className="mb-2 text-lg font-bold text-yellow-100">역할</span>
+      <div className="flex items-center mb-2">
+        <span className="text-lg font-bold text-yellow-100">역할</span>
+        <span className="ml-2 font-semibold text-beige-100">(프론트엔드)</span>
+      </div>
       <div className="mb-10 text-lg text-beige-100">
         <ul className="ml-8 whitespace-pre-wrap list-disc">{role.body}</ul>
       </div>
