@@ -7,9 +7,9 @@ interface propTypes {
 
 export default function MainItem({ title, body }: propTypes) {
   return (
-    <div className="mb-10 text-lg text-beige-100">
-      <span className="text-xl font-bold">{title}</span>
-      <ul className="mt-2 ml-8 whitespace-pre-wrap list-disc">{body}</ul>
+    <div className="mb-10 text-beige-100">
+      <span className="text-lg font-bold">{title}</span>
+      <ul className="mt-2 ml-8 text-lg list-disc break-keep">{body}</ul>
     </div>
   );
 }
