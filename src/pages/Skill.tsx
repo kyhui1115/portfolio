@@ -37,7 +37,7 @@ export default function Skill({ setCurrentPage }: propTypes) {
 
   return (
     <div
-      className="relative flex items-center justify-center h-[95vh] w-full bg-beige-300 shrink-0"
+      className="relative h-[95vh] w-full bg-beige-300 shrink-0"
       ref={skillRef}
     >
       <div ref={sectionRef} className="absolute top-[70%]" />
