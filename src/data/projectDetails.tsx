@@ -26,17 +26,14 @@ export const projectDetails = [
     },
     skill: {
       name: '기술',
-      text: 'React  /  React-native  /  Typescript  /  Redux  /  TailwindCSS  /  Vercel  /  React-native-webView',
+      text: 'React  /  React-native  /  Typescript  /  Redux  /  TailwindCSS  /  Vercel  /  WebView  /  Swiper',
     },
     role: {
       title: '담당',
       body: (
         <>
           <li className="mb-2">
-            메인, 전시 목록, 관심 목록, 취향 테스트, 프로필 페이지 CRUD 구현
-          </li>
-          <li className="mb-2">
-            메인, 전시 목록, 관심 목록, 취향 테스트, 프로필 페이지 UI 구현
+            메인, 전시 목록, 관심 목록, 취향 테스트, 프로필 페이지 UI, 기능 구현
           </li>
           <li className="mb-2">
             카카오 로그인, 로그아웃, 회원탈퇴 등 사용자 인증 기능 구현
@@ -158,15 +155,14 @@ export const projectDetails = [
       title: '담당',
       body: (
         <>
-          <li className="mb-2">관리자 페이지, 마이 페이지 CRUD 구현</li>
-          <li className="mb-2">관리자 페이지, 마이 페이지 UI 구현</li>
+          <li className="mb-2">관리자 페이지, 마이 페이지 UI, 기능 구현</li>
           <li>회원가입, 로그인 등 사용자 인증 기능 구현</li>
         </>
       ),
     },
     devs: [
       {
-        title: '중북된 서버 데이터 요청으로 인한 코드 개선',
+        title: '중복된 서버 데이터 요청으로 인한 코드 개선',
         body: (
           <>
             <li className="mb-2">
@@ -192,7 +188,7 @@ export const projectDetails = [
         ),
       },
       {
-        title: 'UI/UX 개선',
+        title: '드롭다운 UI를 통한 UX 개선',
         body: (
           <>
             <li className="mb-2">
@@ -209,6 +205,26 @@ export const projectDetails = [
               이를 해결하기 위해 최소한의 정보로 전체 목록을 화면에 띄우고, 상세
               정보는 드랍다운 UI를 통해 클릭하여 확인할 수<br />
               있도록 하여 빠르게 주문 목록을 확인할 수 있게 되었습니다.
+            </li>
+          </>
+        ),
+      },
+      {
+        title: 'localStorage를 활용한 UX 개선',
+        body: (
+          <>
+            <li className="mb-2">
+              관리자 페이지에 정보가 많다 보니 메뉴 접기/펼치기(아코디언 UI)를
+              구현하여 정보를 더 쾌적하게 확인할 수 있도록
+              <br />
+              하였는데, 재접속 및 새로고침 시 메뉴의 상태가 유지되지 않아 매번
+              다시 설정해야 했습니다.
+            </li>
+            <li>
+              이를 해결하기 위해 브라우저 저장소인 localStorage에 메뉴의 상태를
+              저장하여 사용자가 지정한 메뉴의 상태가
+              <br />
+              계속해서 유지될 수 있도록 하였습니다.
             </li>
           </>
         ),
@@ -240,8 +256,9 @@ export const projectDetails = [
       title: '담당',
       body: (
         <>
-          <li className="mb-2">헬스장 목록, 상세, 리뷰 페이지 CRUD 구현</li>
-          <li>헬스장 목록, 상세, 리뷰 페이지 UI 구현</li>
+          <li className="mb-2">헬스장 목록, 상세, 리뷰 페이지 UI, 기능 구현</li>
+          <li className="mb-2">Mock API 구현</li>
+          <li>Kakao Map API를 통한 지도 서비스 구현</li>
         </>
       ),
     },
