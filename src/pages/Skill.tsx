@@ -11,21 +11,19 @@ export default function Skill({ setCurrentPage }: propTypes) {
     top: 0,
     left: 0,
   });
-  const monitorRef = useRef<HTMLImageElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const skillRef = useRef<HTMLDivElement>(null);
+
+  console.log(skillRef.current?.offsetHeight);
 
   useEffect(() => {
-    if (monitorRef.current !== null) {
+    if (skillRef.current !== null) {
       setMonitorCenterCoor({
-        top:
-          monitorRef.current?.offsetTop -
-          16 +
-          monitorRef.current?.offsetHeight / 2,
-        left:
-          monitorRef.current?.offsetLeft + monitorRef.current?.offsetWidth / 2,
+        top: skillRef.current?.offsetHeight / 2 - 10,
+        left: skillRef.current?.offsetWidth / 2,
       });
     }
-  }, [monitorRef]);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -40,9 +38,20 @@ export default function Skill({ setCurrentPage }: propTypes) {
   }, [setCurrentPage]);
 
   return (
-    <div className="relative flex items-center justify-center h-[95vh] bg-beige-300 shrink-0">
+    <div
+      className="relative flex items-center justify-center h-[95vh] bg-beige-300 shrink-0"
+      ref={skillRef}
+    >
       <div ref={sectionRef} className="absolute top-[70%]" />
-      <img src={monitor} alt="monitor" className="w-40 h-40" ref={monitorRef} />
+      <img
+        src={monitor}
+        alt="monitor"
+        className="absolute w-40 h-40"
+        style={{
+          top: monitorCenterCoor.top - 70,
+          left: monitorCenterCoor.left - 80,
+        }}
+      />
       <SkillList monitorCenterCoor={monitorCenterCoor} />
     </div>
   );
