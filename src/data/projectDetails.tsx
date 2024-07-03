@@ -257,8 +257,8 @@ export const projectDetails = [
       body: (
         <>
           <li className="mb-2">헬스장 목록, 상세, 리뷰 페이지 UI, 기능 구현</li>
-          <li className="mb-2">Mock API 구현</li>
-          <li>Kakao Map API를 통한 지도 서비스 구현</li>
+          <li className="mb-2">Kakao Map API를 통한 지도 서비스 구현</li>
+          <li>Mock API 구현</li>
         </>
       ),
     },
