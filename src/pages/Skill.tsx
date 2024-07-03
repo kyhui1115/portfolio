@@ -25,7 +25,7 @@ export default function Skill({ setCurrentPage }: propTypes) {
           monitorRef.current?.offsetLeft + monitorRef.current?.offsetWidth / 2,
       });
     }
-  }, []);
+  }, [monitorRef]);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
