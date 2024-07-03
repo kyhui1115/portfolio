@@ -88,7 +88,7 @@ const skillList = [
   },
   {
     name: 'tool',
-    coor: { top: 200, left: 50 },
+    coor: { top: 170, left: 50 },
     items: [
       {
         name: 'Git',
