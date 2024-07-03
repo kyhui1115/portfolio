@@ -19,7 +19,7 @@ export default function Skill({ setCurrentPage }: propTypes) {
   useEffect(() => {
     if (skillRef.current !== null) {
       setMonitorCenterCoor({
-        top: skillRef.current?.offsetHeight / 2 - 10,
+        top: skillRef.current?.offsetHeight / 2,
         left: skillRef.current?.offsetWidth / 2,
       });
     }
