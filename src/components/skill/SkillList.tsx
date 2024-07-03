@@ -8,6 +8,7 @@ import {
   BiLogoTailwindCss,
   BiLogoAws,
 } from 'react-icons/bi';
+import { PiFigmaLogoFill } from 'react-icons/pi';
 import { SiStyledcomponents, SiVercel, SiGit, SiGithub } from 'react-icons/si';
 import SkillItem from './SkillItem';
 
@@ -96,6 +97,10 @@ const skillList = [
       {
         name: 'GitHub',
         icon: <SiGithub />,
+      },
+      {
+        name: 'Figma',
+        icon: <PiFigmaLogoFill />,
       },
     ],
   },
