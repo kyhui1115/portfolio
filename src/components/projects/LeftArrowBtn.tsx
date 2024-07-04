@@ -16,13 +16,11 @@ export default function LeftArrowBtn({ setProjectList }: propTypes) {
       return newList;
     });
 
-    setTimeout(() => {
-      setProjectList((prev) => {
-        const newList = [...prev, ...lastProject];
-        localStorage.setItem('list', JSON.stringify(newList));
-        return newList;
-      });
-    }, 100);
+    setProjectList((prev) => {
+      const newList = [...prev, ...lastProject];
+      localStorage.setItem('list', JSON.stringify(newList));
+      return newList;
+    });
   };
 
   return (
