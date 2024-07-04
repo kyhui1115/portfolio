@@ -14,7 +14,7 @@ export const projects = [
     typeAndTerm: '팀 프로젝트  /  2024. 04 ~',
     intro: '전시 정보와 리뷰 등을 제공하는 서비스',
     skill:
-      'React / React-native / Typescript / Redux\nTailwindCSS / Vercel / React-native-webview',
+      'React / React-native / Typescript / Redux\nTailwindCSS / Vercel / Webview / Swiper',
   },
   {
     id: 1,
