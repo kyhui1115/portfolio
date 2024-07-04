@@ -22,7 +22,7 @@ export default function LeftArrowBtn({ setProjectList }: propTypes) {
         localStorage.setItem('list', JSON.stringify(newList));
         return newList;
       });
-    }, 500);
+    }, 100);
   };
 
   return (

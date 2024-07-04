@@ -15,6 +15,7 @@ export const projects = [
     intro: '전시 정보와 리뷰 등을 제공하는 서비스',
     skill:
       'React / React-native / Typescript / Redux\nTailwindCSS / Vercel / Webview / Swiper',
+    review: '',
   },
   {
     id: 1,
@@ -24,6 +25,7 @@ export const projects = [
     typeAndTerm: '팀 프로젝트  /  2023. 06 ~ 2023. 09',
     intro: '개발자에게 필요한 장비를 판매하는 서비스',
     skill: 'React / Typescript / Redux\nTailwindCSS / AWS S3 / Recharts',
+    review: '',
   },
   {
     id: 2,
@@ -33,5 +35,6 @@ export const projects = [
     typeAndTerm: '팀 프로젝트  /  2023. 03 ~ 2023. 04',
     intro: '헬스장 추천 및 커뮤니티 서비스',
     skill: 'React / Javascript / Zustand\nTailwindCSS / AWS S3 / Kakao Map API',
+    review: '',
   },
 ];

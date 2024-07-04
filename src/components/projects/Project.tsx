@@ -10,6 +10,7 @@ interface propTypes {
   typeAndTerm: string;
   intro: string;
   skill: string;
+  review: string;
   zIndex: number;
   idx: number;
   setProjectList: Dispatch<SetStateAction<project[]>>;
@@ -23,6 +24,7 @@ export interface project {
   typeAndTerm: string;
   intro: string;
   skill: string;
+  review: string;
 }
 
 export default function Project({
@@ -33,6 +35,7 @@ export default function Project({
   typeAndTerm,
   intro,
   skill,
+  review,
   zIndex,
   idx,
   setProjectList,
@@ -55,6 +58,7 @@ export default function Project({
         id={id}
         image={image}
         shadow={shadow}
+        review={review}
         idx={idx}
         setProjectList={setProjectList}
       />

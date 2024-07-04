@@ -48,6 +48,7 @@ export default function Projects({ setCurrentPage }: propTypes) {
             typeAndTerm={project.typeAndTerm}
             intro={project.intro}
             skill={project.skill}
+            review={project.review}
             zIndex={3 - i}
             idx={i}
             setProjectList={setProjectList}
