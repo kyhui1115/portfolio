@@ -19,7 +19,7 @@ const contentList = [
       <>
         피그마로 User flow에 따라 UI를 디자인하고
         <br />
-        CSS transform과 swiper, recharts 등 라이브러리를 사용하여
+        CSS animation, swiper, recharts 등 라이브러리를 사용하여
         <br />
         <span className="font-bold text-yellow-100">
           부드러운 UI를 만들고 서비스의 UX를 개선
