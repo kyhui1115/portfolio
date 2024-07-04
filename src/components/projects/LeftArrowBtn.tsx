@@ -8,11 +8,21 @@ interface propTypes {
 
 export default function LeftArrowBtn({ setProjectList }: propTypes) {
   const btnHandler = () => {
+    let lastProject: project[] = [];
+
     setProjectList((prev) => {
-      const newList = [...prev.slice(1), ...prev.slice(0, 1)];
-      localStorage.setItem('list', JSON.stringify(newList));
+      const newList = [...prev.slice(1)];
+      lastProject = [...prev.slice(0, 1)];
       return newList;
     });
+
+    setTimeout(() => {
+      setProjectList((prev) => {
+        const newList = [...prev, ...lastProject];
+        localStorage.setItem('list', JSON.stringify(newList));
+        return newList;
+      });
+    }, 500);
   };
 
   return (

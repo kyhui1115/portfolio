@@ -37,12 +37,17 @@ export default function Project({
   idx,
   setProjectList,
 }: propTypes) {
+  const transitionStyles = {
+    top: 65 + idx * 20 + 'px',
+    left: 300 - idx * (120 - idx * 20) + 'px',
+    transition: 'top 1000ms, left 1000ms',
+  };
+
   return (
     <div
       style={{
         zIndex: zIndex,
-        top: 65 + idx * 20,
-        left: 300 - idx * (120 - idx * 20),
+        ...transitionStyles,
       }}
       className={`absolute flex`}
     >

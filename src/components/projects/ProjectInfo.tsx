@@ -12,7 +12,7 @@ export default function ProjectInfo({
   skill,
 }: propTypes) {
   return (
-    <div className="flex flex-col items-start mt-16 -ml-16 h-60 w-84">
+    <div className="flex flex-col items-start mt-16 -ml-16 h-60 w-84 animate-scale">
       <span className="text-2xl font-semibold tracking-wide text-beige-100">
         {title}
       </span>

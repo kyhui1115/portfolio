@@ -27,6 +27,7 @@ module.exports = {
       },
       animation: {
         translate: 'translate 1s linear',
+        scale: 'scale 1s',
       },
       keyframes: {
         translate: {
@@ -35,6 +36,14 @@ module.exports = {
           },
           to: {
             transform: 'translateY(0%)',
+          },
+        },
+        scale: {
+          from: {
+            transform: 'scale(.5)',
+          },
+          to: {
+            transform: 'scale(1)',
           },
         },
       },

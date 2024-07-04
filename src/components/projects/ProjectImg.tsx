@@ -42,7 +42,7 @@ export default function ProjectImg({
           width: 800 * (1 - 0.14 * idx) + 'px',
           height: 368 * (1 - 0.14 * idx) + 'px',
         }}
-        className="flex items-center justify-center bg-gray-500"
+        className="flex items-center justify-center duration-1000 bg-gray-500"
       >
         <span className="absolute text-3xl font-bold text-red-100">more</span>
         <img src={image} alt="" className="z-10 rounded-xl hover:opacity-50" />
@@ -53,7 +53,7 @@ export default function ProjectImg({
           height: 100 * (1 - 0.14 * idx) + 'px',
           transform: 'rotateY(15deg) scaleY(-1)',
         }}
-        className="absolute bottom-0 bg-gray-500 rounded-b-xl"
+        className="absolute bottom-0 duration-1000 bg-gray-500 rounded-b-xl"
       />
       <img
         src={shadow}
@@ -65,7 +65,7 @@ export default function ProjectImg({
           maskImage:
             'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
         }}
-        className="opacity-20 rounded-b-xl"
+        className="duration-1000 opacity-20 rounded-b-xl"
       />
     </div>
   );
