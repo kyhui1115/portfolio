@@ -12,13 +12,13 @@ export default function Skill({ setCurrentPage }: propTypes) {
     left: 0,
   });
   const sectionRef = useRef<HTMLDivElement>(null);
-  const skillRef = useRef<HTMLDivElement>(null);
+  const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (skillRef.current !== null) {
+    if (pageRef.current !== null) {
       setMonitorCenterCoor({
-        top: skillRef.current?.offsetHeight / 2,
-        left: skillRef.current?.offsetWidth / 2,
+        top: pageRef.current?.offsetHeight / 2,
+        left: pageRef.current?.offsetWidth / 2,
       });
     }
   }, []);
@@ -38,7 +38,7 @@ export default function Skill({ setCurrentPage }: propTypes) {
   return (
     <div
       className="relative h-[95vh] w-full bg-beige-300 shrink-0"
-      ref={skillRef}
+      ref={pageRef}
     >
       <div ref={sectionRef} className="absolute top-[70%]" />
       <img
