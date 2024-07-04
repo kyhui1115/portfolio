@@ -1,7 +1,7 @@
 import { RefObject } from 'react';
 
 interface propTypes {
-  skillCoor: {
+  skillBoxCoor: {
     top: number;
     left: number;
   };
@@ -13,24 +13,24 @@ interface propTypes {
 }
 
 export default function Line({
-  skillCoor,
+  skillBoxCoor,
   skillRef,
   monitorCenterCoor,
 }: propTypes) {
-  const SkillCenterCoor = {
-    top: skillCoor.top + skillRef.current?.offsetHeight / 2,
-    left: skillCoor.left + skillRef.current?.offsetWidth / 2,
+  const skillCenterCoor = {
+    top: skillBoxCoor.top + skillRef.current?.offsetHeight / 2,
+    left: skillBoxCoor.left + skillRef.current?.offsetWidth / 2,
   };
 
   const lineWidth = Math.sqrt(
-    (SkillCenterCoor.top - monitorCenterCoor.top) ** 2 +
-      (SkillCenterCoor.left - monitorCenterCoor.left) ** 2
+    (skillCenterCoor.top - monitorCenterCoor.top) ** 2 +
+      (skillCenterCoor.left - monitorCenterCoor.left) ** 2
   ).toFixed(0);
 
   const lineRotate =
     (Math.atan2(
-      monitorCenterCoor.top - SkillCenterCoor.top,
-      monitorCenterCoor.left - SkillCenterCoor.left
+      monitorCenterCoor.top - skillCenterCoor.top,
+      monitorCenterCoor.left - skillCenterCoor.left
     ) *
       180) /
     Math.PI;
@@ -39,8 +39,8 @@ export default function Line({
     <>
       <div
         style={{
-          top: SkillCenterCoor.top + 'px',
-          left: SkillCenterCoor.left + 'px',
+          top: skillCenterCoor.top + 'px',
+          left: skillCenterCoor.left + 'px',
           width: lineWidth + 'px',
           rotate: lineRotate + 'deg',
         }}

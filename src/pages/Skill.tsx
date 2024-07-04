@@ -15,7 +15,7 @@ export default function Skill({ setCurrentPage }: propTypes) {
   const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (pageRef.current !== null) {
+    if (pageRef.current) {
       setMonitorCenterCoor({
         top: pageRef.current?.offsetHeight / 2,
         left: pageRef.current?.offsetWidth / 2,
