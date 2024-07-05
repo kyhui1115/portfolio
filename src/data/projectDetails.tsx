@@ -128,7 +128,7 @@ export const projectDetails = [
     links: [
       {
         icon: <BsGithub className="text-2xl hover:text-red-100" />,
-        url: 'https://github.com/devstoreproject/devstore',
+        url: 'https://github.com/kyhui1115/devstore',
       },
     ],
     intro: {
