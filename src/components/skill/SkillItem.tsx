@@ -38,10 +38,10 @@ export default function SkillItem({
       const mouseX = e.clientX;
 
       if (
-        skillBoxCoor.top > monitorCenterCoor.top + coor.top - 150 &&
-        skillBoxCoor.top < monitorCenterCoor.top + coor.top + 150 &&
-        skillBoxCoor.left > monitorCenterCoor.left + coor.left - 150 &&
-        skillBoxCoor.left < monitorCenterCoor.left + coor.left + 150
+        skillBoxCoor.top > monitorCenterCoor.top + coor.top - 120 &&
+        skillBoxCoor.top < monitorCenterCoor.top + coor.top + 120 &&
+        skillBoxCoor.left > monitorCenterCoor.left + coor.left - 120 &&
+        skillBoxCoor.left < monitorCenterCoor.left + coor.left + 120
       ) {
         setSkillBoxCoor({
           top:
