@@ -7,7 +7,6 @@ interface propTypes {
   id: number;
   image: string;
   shadow: string;
-  review: string;
   idx: number;
   setProjectList: Dispatch<SetStateAction<project[]>>;
 }
@@ -16,7 +15,6 @@ export default function ProjectImg({
   id,
   image,
   shadow,
-  review,
   idx,
   setProjectList,
 }: propTypes) {
@@ -26,7 +24,6 @@ export default function ProjectImg({
         id={id}
         idx={idx}
         image={image}
-        review={review}
         setProjectList={setProjectList}
       />
       <Shadow idx={idx} shadow={shadow} />

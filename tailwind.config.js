@@ -8,8 +8,9 @@ module.exports = {
         136: '34rem',
       },
       width: {
-        240: '60rem',
         84: '21rem',
+        140: '35rem',
+        240: '60rem',
       },
       colors: {
         'beige-100': '#FAF5F0',

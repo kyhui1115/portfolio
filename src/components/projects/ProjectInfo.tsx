@@ -1,8 +1,15 @@
+import Intro from './Intro';
+import Review from './Review';
+import Skill from './Skill';
+import Title from './Title';
+import TypeAndTerm from './TypeAndTerm';
+
 interface propTypes {
   title: string;
   typeAndTerm: string;
   intro: string;
-  skill: string;
+  skill: string[];
+  review: string;
 }
 
 export default function ProjectInfo({
@@ -10,21 +17,17 @@ export default function ProjectInfo({
   typeAndTerm,
   intro,
   skill,
+  review,
 }: propTypes) {
   return (
-    <div className="flex flex-col items-start mt-16 -ml-16 h-60 w-84 animate-scale">
-      <span className="text-2xl font-semibold tracking-wide text-beige-100">
-        {title}
-      </span>
-      <span className="mb-6 text-sm font-semibold text-gray-100 whitespace-pre-wrap">
-        {typeAndTerm}
-      </span>
-      <span className="text-lg font-semibold text-yellow-100">introduce</span>
-      <span className="text-beige-100">{intro}</span>
-      <span className="mt-6 text-lg font-semibold text-yellow-100">skill</span>
-      <span className="whitespace-pre-line text-beige-100 text-start">
-        {skill}
-      </span>
+    <div className="flex flex-col items-start mt-10 -ml-16 animate-scale w-140">
+      <div className="flex">
+        <Title title={title} />
+        <TypeAndTerm typeAndTerm={typeAndTerm} />
+      </div>
+      <Skill skill={skill} />
+      <Intro intro={intro} />
+      <Review review={review} />
     </div>
   );
 }

@@ -36,7 +36,7 @@ export default function Projects({ setCurrentPage }: propTypes) {
   return (
     <div className="relative flex items-center justify-center h-[95vh] bg-gray-500 shrink-0">
       <div ref={sectionRef} className="absolute top-[70%]" />
-      <div className="w-[1370px] h-[600px] relative flex items-center mt-20">
+      <div className="w-[1600px] h-[600px] relative flex items-center mt-20">
         <LeftArrowBtn setProjectList={setProjectList} />
         {projectList.map((project, i) => (
           <Project

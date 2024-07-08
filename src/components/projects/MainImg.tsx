@@ -6,17 +6,10 @@ interface propTypes {
   id: number;
   idx: number;
   image: string;
-  review: string;
   setProjectList: Dispatch<SetStateAction<project[]>>;
 }
 
-export default function MainImg({
-  id,
-  idx,
-  image,
-  review,
-  setProjectList,
-}: propTypes) {
+export default function MainImg({ id, idx, image, setProjectList }: propTypes) {
   const navigate = useNavigate();
   const projectBtnHandler = () => {
     if (idx === 0) {

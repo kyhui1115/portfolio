@@ -2,15 +2,7 @@ import { Dispatch, SetStateAction } from 'react';
 import ProjectImg from './ProjectImg';
 import ProjectInfo from './ProjectInfo';
 
-interface propTypes {
-  id: number;
-  image: string;
-  shadow: string;
-  title: string;
-  typeAndTerm: string;
-  intro: string;
-  skill: string;
-  review: string;
+interface propTypes extends project {
   zIndex: number;
   idx: number;
   setProjectList: Dispatch<SetStateAction<project[]>>;
@@ -23,7 +15,7 @@ export interface project {
   title: string;
   typeAndTerm: string;
   intro: string;
-  skill: string;
+  skill: string[];
   review: string;
 }
 
@@ -58,7 +50,6 @@ export default function Project({
         id={id}
         image={image}
         shadow={shadow}
-        review={review}
         idx={idx}
         setProjectList={setProjectList}
       />
@@ -68,6 +59,7 @@ export default function Project({
           typeAndTerm={typeAndTerm}
           intro={intro}
           skill={skill}
+          review={review}
         />
       ) : null}
     </div>
