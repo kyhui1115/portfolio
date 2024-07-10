@@ -48,16 +48,4 @@ const contentList = [
       </>
     ),
   },
-  {
-    text: (
-      <>
-        새로운 것을 배우고 적용하는데 주저하지 않습니다.
-        <br />이 과정에서{' '}
-        <span className="font-bold text-yellow-100">
-          문제를 해결해 나가며 성장
-        </span>
-        한다고 믿습니다.
-      </>
-    ),
-  },
 ];
