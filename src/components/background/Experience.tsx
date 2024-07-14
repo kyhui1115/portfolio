@@ -22,7 +22,7 @@ const experienceList = [
   {
     subTitle: '원티드 프론트엔드 인턴십 교육',
     term: '2023. 05 ~ 2023. 06',
-    body: 'React Hook 심층 활용(렌더링 최적화, 관심사 분리)\nTypescript, 쇼프트웨어 테스트(Jest, TDD) 교육',
+    body: 'React Hook 심층 활용(렌더링 최적화, 관심사 분리)\nTypescript, 소프트웨어 테스트(Jest, TDD) 교육',
   },
   {
     subTitle: '코드스테이츠 프론트엔드 부트캠프',
